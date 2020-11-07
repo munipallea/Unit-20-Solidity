@@ -22,12 +22,12 @@ contract TieredProfitSplitter {
         uint total;
         uint amount;
 
-        // @TODO: Calculate and transfer the distribution percentage
+        // Calculate and transfer the distribution percentage
         amount = points * 60; // Step 1: Set amount to equal `points` * the number of percentage points for this employee
         total += amount; // Step 2: Add the `amount` to `total` to keep a running total
         employee_one.transfer(amount); // Step 3: Transfer the `amount` to the employee
 
-        // @TODO: Repeat the previous steps for `employee_two` and `employee_three`
+        // Repeat the previous steps for `employee_two` and `employee_three`
         amount = points * 25; // Step 1: Set amount to equal `points` * the number of percentage points for this employee
         total += amount; // Step 2: Add the `amount` to `total` to keep a running total
         employee_two.transfer(amount); // Step 3: Transfer the `amount` to the employee
@@ -38,7 +38,7 @@ contract TieredProfitSplitter {
 
         employee_one.transfer(msg.value - total); // ceo gets the remaining wei
     }
-
+    // Message to revert any Ether set as not permissible
     function() external payable {
         deposit();
     }
