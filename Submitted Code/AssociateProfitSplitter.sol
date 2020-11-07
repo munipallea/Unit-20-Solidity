@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-// lvl 1: equal split
+// lvl 1: equal split of third each
 contract AssociateProfitSplitter {
     // Addresses `employee_one`, `employee_two` and `employee_three` for the three employees
     
