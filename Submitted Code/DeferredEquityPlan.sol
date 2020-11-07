@@ -32,7 +32,7 @@ contract DeferredEquityPlan {
 
         distributed_shares = (now - start_time) / 365 days * annual_distribution; // Calculate the shares distributed by using the function (now - start_time) / 365 days * the annual distribution
 
-        // double check in case the employee does not cash out until after 5+ years
+        // double check in case the employee does not cash out until after 5+ years. This is akin to a lumpsum
         if (distributed_shares > 1000) {
             distributed_shares = 1000;
         }
